@@ -11,6 +11,7 @@ window.onload = function()
     var heightInBlocks = canvasHeight/blockSize;
     var score;
     var timeout;
+    var pomme = document.getElementById("pomme");
 
     init();
 
@@ -232,12 +233,12 @@ window.onload = function()
         {
             ctx.save();
             //ctx.fillStyle = "#33cc33";
-            document.getElementById("pomme");
+            
             ctx.beginPath();
             var radius = blockSize/2;
-            var x = this.position[0]*blockSize + radius;
-            var y = this.position[1]*blockSize + radius;
-            ctx.arc(x,y, radius, 0, Math.PI*2, true);
+            var x = this.position[0]*blockSize ;
+            var y = this.position[1]*blockSize ;
+            ctx.drawImage(pomme, x ,y , 32, 32); // pour l'image
             ctx.fill();
             ctx.restore();
         };
