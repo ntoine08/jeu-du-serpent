@@ -11,7 +11,8 @@ window.onload = function()
     var heightInBlocks = canvasHeight/blockSize;
     var score;
     var timeout;
-    var pomme = document.getElementById("pomme"); // pour ajouter l'image
+    var pomme = document.getElementById("pomme"); // pour ajouter l'image de la pomme
+    var serpents = document.getElementById("serpent"); // pour ajouter l'image en background
 
     init();
 
@@ -24,6 +25,7 @@ window.onload = function()
         canvas.style.margin = "50px auto";
         canvas.style.display = "block";
         canvas.style.backgroundColor = "#ddd";
+        //ctx.drawImage(serpents);
         document.body.appendChild(canvas);
         ctx = canvas.getContext('2d');
         snakee = new Snake( [[6,4], [5,4], [4,4], [3,4], [2,4]], "right");
