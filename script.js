@@ -66,7 +66,7 @@ window.onload = function()
 
     }
 
-    function gameOver()
+    function gameOver() // la fonction pour le game over
     {
         ctx.save();
         ctx.font = "bold 70px sans-serif";
@@ -85,7 +85,7 @@ window.onload = function()
         ctx.restore();
     }
 
-    function restart()
+    function restart() // pour pouvoir redémarrer le jeu
     {
         snakee = new Snake( [[6,4], [5,4], [4,4], [3,4], [2,4]], "right");
         applee = new Apple([10,10]);
@@ -94,7 +94,7 @@ window.onload = function()
         refreshCanvas();
     }
 
-    function drawScore()
+    function drawScore() // pour le score
     {
         ctx.save();
         ctx.font = "bold 200px sans-serif";
@@ -115,7 +115,7 @@ window.onload = function()
         ctx.fillRect(x ,y , blockSize, blockSize);
     }
 
-    function Snake(body,direction)
+    function Snake(body,direction) // pour le serpent
     {
         this.body = body;
         this.direction = direction;
@@ -178,7 +178,7 @@ window.onload = function()
             }
 
         };
-        this.checkCollision = function()
+        this.checkCollision = function() // si le serpent heurte quelque chose
         {
             var wallCollision = false;
             var snakeCollision = false;
@@ -210,7 +210,7 @@ window.onload = function()
             return wallCollision || snakeCollision;
 
         };
-        this.isEatingApple = function(appleToEat)
+        this.isEatingApple = function(appleToEat) // le serpent mange la pomme
         {
             var head = this.body[0];
             if(head[0] === appleToEat.position[0] && head[1] === appleToEat.position[1] )
@@ -225,7 +225,7 @@ window.onload = function()
 
     }
 
-    function Apple(position)
+    function Apple(position) // pour la pomme
     {
         this.position = position;
         this.draw = function()
@@ -264,7 +264,7 @@ window.onload = function()
 
     }
 
-    document.onkeydown = function handleKeyDown(e)
+    document.onkeydown = function handleKeyDown(e) // attribution des touches
     {
         var key = e.keyCode;
         var newDirection;
