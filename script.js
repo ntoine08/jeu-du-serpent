@@ -11,7 +11,7 @@ window.onload = function()
     var heightInBlocks = canvasHeight/blockSize;
     var score;
     var timeout;
-    var pomme = document.getElementById("pomme");
+    var pomme = document.getElementById("pomme"); // pour ajouter l'image
 
     init();
 
