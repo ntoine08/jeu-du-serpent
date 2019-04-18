@@ -25,7 +25,7 @@ window.onload = function()
         canvas.style.margin = "50px auto";
         canvas.style.display = "block";
         canvas.style.background = "url(serpent.jpg) no-repeat center center";
-        //ctx.drawImage(serpents);
+        
         document.body.appendChild(canvas);
         ctx = canvas.getContext('2d');
         snakee = new Snake( [[6,4], [5,4], [4,4], [3,4], [2,4]], "right");
@@ -241,7 +241,10 @@ window.onload = function()
             var x = this.position[0]*blockSize ;
             var y = this.position[1]*blockSize ;
             ctx.drawImage(pomme, x ,y , 30, 30); // pour l'image
-            
+            //var imagepomme = new Image();
+            //imagepomme.src = "pomme.jpg";
+            //var canvasGame2DContext = monCanvas.getContext('2d');
+            //canvasGame2DContext.drawImage(imagepomme, x, y, 30, 30);
             ctx.fill();
             ctx.restore();
         };
