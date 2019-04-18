@@ -231,7 +231,8 @@ window.onload = function()
         this.draw = function()
         {
             ctx.save();
-            ctx.fillStyle = "#33cc33";
+            //ctx.fillStyle = "#33cc33";
+            document.getElementById("pomme");
             ctx.beginPath();
             var radius = blockSize/2;
             var x = this.position[0]*blockSize + radius;
