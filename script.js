@@ -24,7 +24,7 @@ window.onload = function()
         canvas.style.border = "30px solid black";
         canvas.style.margin = "50px auto";
         canvas.style.display = "block";
-        canvas.style.backgroundColor = "#ddd";
+        canvas.style.background = "url(serpent.jpg) no-repeat center center";
         //ctx.drawImage(serpents);
         document.body.appendChild(canvas);
         ctx = canvas.getContext('2d');
@@ -240,7 +240,8 @@ window.onload = function()
             var radius = blockSize/2;
             var x = this.position[0]*blockSize ;
             var y = this.position[1]*blockSize ;
-            ctx.drawImage(pomme, x ,y , 32, 32); // pour l'image
+            ctx.drawImage(pomme, x ,y , 30, 30); // pour l'image
+            
             ctx.fill();
             ctx.restore();
         };
