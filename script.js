@@ -11,9 +11,9 @@ window.onload = function()
     var heightInBlocks = canvasHeight/blockSize;
     var score;
     var timeout;
-    var pomme = document.getElementById("pomme"); // pour ajouter l'image de la pomme
-    var serpents = document.getElementById("serpent"); // pour ajouter l'image en background
-
+    //var pomme = document.getElementById("pomme"); // pour ajouter l'image de la pomme
+    var pomme = new Image();
+    pomme.src = 'pomme.jpg';
     init();
 
     function init()
